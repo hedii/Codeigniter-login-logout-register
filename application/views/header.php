@@ -1,3 +1,4 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,11 +31,11 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="<?= base_url() ?>"></a>
+					<a class="navbar-brand" href="<?= base_url() ?>">Codeigniter-forum</a>
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Link</a></li>
+						<li><a href="<?= base_url('user/login') ?>">Login</a></li>
 					</ul>
 				</div><!-- .navbar-collapse -->
 			</div><!-- .container-fluid -->
