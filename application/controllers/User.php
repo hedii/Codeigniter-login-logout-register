@@ -7,6 +7,7 @@ class User extends CI_Controller {
 		
 		parent::__construct();
 		$this->load->helper(array('url'));
+		$this->load->model('user_model');
 		
 	}
 	
