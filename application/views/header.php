@@ -35,7 +35,8 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="<?= base_url('user/login') ?>">Login</a></li>
+						<li><a href="<?= base_url('login') ?>">Login</a></li>
+						<li><a href="<?= base_url('register') ?>">Register</a></li>
 					</ul>
 				</div><!-- .navbar-collapse -->
 			</div><!-- .container-fluid -->
