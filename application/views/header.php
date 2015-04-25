@@ -37,6 +37,7 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="<?= base_url('login') ?>">Login</a></li>
 						<li><a href="<?= base_url('register') ?>">Register</a></li>
+						<li><a href="<?= base_url('logout') ?>">Logout</a></li>
 					</ul>
 				</div><!-- .navbar-collapse -->
 			</div><!-- .container-fluid -->
@@ -44,3 +45,15 @@
 	</header><!-- #site-header -->
 
 	<main id="site-content" role="main">
+		
+		
+		<?php if (isset($_SESSION)) : ?>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<?php var_dump($_SESSION); ?>
+					</div>
+				</div><!-- .row -->
+			</div><!-- .container -->
+		<?php endif; ?>
+		
