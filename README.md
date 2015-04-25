@@ -6,7 +6,7 @@ A user login, logout, register start for Codeigniter 3
 2. On your database, open a SQL terminal paste this and execute:
 
 ```sql
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(255) NOT NULL DEFAULT '',
   `email` varchar(255) NOT NULL DEFAULT '',
@@ -18,6 +18,14 @@ CREATE TABLE `users` (
   `is_confirmed` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `is_deleted` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
+);
+CREATE TABLE IF NOT EXISTS `ci_sessions` (
+        `id` varchar(40) NOT NULL,
+        `ip_address` varchar(45) NOT NULL,
+        `timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
+        `data` blob NOT NULL,
+        PRIMARY KEY (id),
+        KEY `ci_sessions_timestamp` (`timestamp`)
 );
 ```
 Go to http://example.com/register and create a user
