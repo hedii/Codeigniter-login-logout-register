@@ -49,7 +49,6 @@
 
 	<main id="site-content" role="main">
 		
-		
 		<?php if (isset($_SESSION)) : ?>
 			<div class="container">
 				<div class="row">

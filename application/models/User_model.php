@@ -94,20 +94,6 @@ class User_model extends CI_Model {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	/**
 	 * hash_password function.
 	 * 
