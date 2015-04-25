@@ -35,9 +35,12 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="<?= base_url('login') ?>">Login</a></li>
-						<li><a href="<?= base_url('register') ?>">Register</a></li>
-						<li><a href="<?= base_url('logout') ?>">Logout</a></li>
+						<?php if (isset($_SESSION['username']) && $_SESSION['logged_in'] === true) : ?>
+							<li><a href="<?= base_url('logout') ?>">Logout</a></li>
+						<?php else : ?>
+							<li><a href="<?= base_url('register') ?>">Register</a></li>
+							<li><a href="<?= base_url('login') ?>">Login</a></li>
+						<?php endif; ?>
 					</ul>
 				</div><!-- .navbar-collapse -->
 			</div><!-- .container-fluid -->
