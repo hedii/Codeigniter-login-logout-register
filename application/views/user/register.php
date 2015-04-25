@@ -8,6 +8,13 @@
 				</div>
 			</div>
 		<?php endif; ?>
+		<?php if (isset($error)) : ?>
+			<div class="col-md-12">
+				<div class="alert alert-danger" role="alert">
+					<?= $error ?>
+				</div>
+			</div>
+		<?php endif; ?>
 		<div class="col-md-12">
 			<?= form_open() ?>
 				<div class="form-group">
