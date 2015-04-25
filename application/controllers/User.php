@@ -26,9 +26,7 @@ class User extends CI_Controller {
 	
 	public function index() {
 		
-		$this->load->view('header');
-		$this->load->view('user/login');
-		$this->load->view('footer');
+
 		
 	}
 	
@@ -57,7 +55,7 @@ class User extends CI_Controller {
 			
 			// validation not ok, send validation errors to the view
 			$this->load->view('header');
-			$this->load->view('user/register', $data);
+			$this->load->view('user/register/register', $data);
 			$this->load->view('footer');
 			
 		} else {
@@ -71,7 +69,7 @@ class User extends CI_Controller {
 				
 				// user creation ok
 				$this->load->view('header');
-				$this->load->view('user/register_success', $data);
+				$this->load->view('user/register/register_success', $data);
 				$this->load->view('footer');
 				
 			} else {
@@ -81,7 +79,7 @@ class User extends CI_Controller {
 				
 				// send error to the view
 				$this->load->view('header');
-				$this->load->view('user/register', $data);
+				$this->load->view('user/register/register', $data);
 				$this->load->view('footer');
 				
 			}
@@ -113,7 +111,7 @@ class User extends CI_Controller {
 			
 			// validation not ok, send validation errors to the view
 			$this->load->view('header');
-			$this->load->view('user/login');
+			$this->load->view('user/login/login');
 			$this->load->view('footer');
 			
 		} else {
@@ -136,7 +134,7 @@ class User extends CI_Controller {
 				
 				// user login ok
 				$this->load->view('header');
-				$this->load->view('user/login_success', $data);
+				$this->load->view('user/login/login_success', $data);
 				$this->load->view('footer');
 				
 			} else {
@@ -146,7 +144,7 @@ class User extends CI_Controller {
 				
 				// send error to the view
 				$this->load->view('header');
-				$this->load->view('user/login', $data);
+				$this->load->view('user/login/login', $data);
 				$this->load->view('footer');
 				
 			}
@@ -155,6 +153,12 @@ class User extends CI_Controller {
 		
 	}
 	
+	/**
+	 * logout function.
+	 * 
+	 * @access public
+	 * @return void
+	 */
 	public function logout() {
 		
 		// create the data object
@@ -169,7 +173,7 @@ class User extends CI_Controller {
 			
 			// user logout ok
 			$this->load->view('header');
-			$this->load->view('user/logout_success', $data);
+			$this->load->view('user/logout/logout_success', $data);
 			$this->load->view('footer');
 			
 		} else {
