@@ -1,6 +1,14 @@
 # codeigniter-login-logout-register
 A user login, logout, register start for Codeigniter 3
 
+## Notice
+Codeigniter has not evolved as fast as modern php and php best practices.<br>
+It has become a very old framework, and I advise against using it, even for beginners.
+
+Try something like [Laravel](https://laravel.com/) or [Symfony](https://symfony.com/).
+
+With Laravel you get login-logout-register out of the box, and it is a very easy to use and pleasant framework: go for it.
+
 ## Installation
 1. Open /application/config/database.php and edit with your database settings
 2. On your database, open a SQL terminal paste this and execute:
@@ -20,12 +28,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 );
 CREATE TABLE IF NOT EXISTS `ci_sessions` (
-        `id` varchar(40) NOT NULL,
-        `ip_address` varchar(45) NOT NULL,
-        `timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
-        `data` blob NOT NULL,
-        PRIMARY KEY (id),
-        KEY `ci_sessions_timestamp` (`timestamp`)
+  `id` varchar(40) NOT NULL,
+  `ip_address` varchar(45) NOT NULL,
+  `timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
+  `data` blob NOT NULL,
+  PRIMARY KEY (id),
+  KEY `ci_sessions_timestamp` (`timestamp`)
 );
 ```
 Go to http://example.com/register and create a user
